@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #17171A;
+  overflow-x: hidden;
+  top: -50vw;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #0B0B0C;
+  box-shadow: 1px 1px 5px 0 rgba(255, 255, 255,0.1);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.topnav a:hover {
+  background-color: #17171A;
+  color: #fff;
+}
+
+.topnav a.active {
+  background-color: #0B0B0C;
+  border-right: 2px solid #fff;
+  color: #fff;
+}
+
+.topnav a.active:hover {
+  background-color: #17171A;
+  color: #fff;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.square-box{
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 1em;
+    background-color: rgba(245,245,245,0.8);
+    padding: 1%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,1.0);
+    left: 5vw;
+    top: 6vw;
+    box-shadow: 1px 1px 5px 0 rgba(255, 255, 255), -1px -1px 5px 0 rgb(255, 255, 255);
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 45%;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #000;
+}
+.square-content div {
+   display: table;
+   width: 100%;
+   height: 50%;
+}
+.square-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #000;
+    font-size: 1.5vw;
+}
+
+.square-box2{
+    position: relative;
+    float: right;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 1em;
+    background-color: rgba(245,245,245,0.8);
+    padding: 1%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,1.0);
+    right: 5vw;
+    box-shadow: 1px 1px 5px 0 rgba(255, 255, 255), -1px -1px 5px 0 rgb(255, 255, 255);
+    top: 10vw;
+}
+.square-box2:before{
+    content: "";
+    display: block;
+    padding-top: 45%;
+}
+.square-content2{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #000;
+}
+.square-content2 div {
+   display: table;
+   width: 100%;
+   height: 50%;
+}
+.square-content2 span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #000;
+    font-size: 1.5vw;
+}
+
+img {
+    height: auto;
+    width: 45%;
+}
+
+.footer {
+    height:10%; 
+    width: 100%; 
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
+    background-color: #0b0b0c;
+    box-shadow: 1px 1px 5px 0 rgba(255, 255, 255,0.1);
+}
+
+.footer a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 28px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer a:hover {
+  background-color: #17171a;
+  color: #ffffff;
+}
+
+.footer a.active {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 28px 28px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid rgba(245,245,245,0.8);
+}
+
+.footer a.active:hover {
+  float: left;
+  text-align: center;
+  padding: 28px 28px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #00BFFF;
+  background-color: #17171a;
+  color: #ffffff;
+}
+
+.footer.twitter {
+    position: absolute;
+    padding: 5px 7px;
+    left: 5em;
+}
+
+.footer .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .link {
+        font-size: 2.5vw;
+        padding-left: 11vw;
+    }
+    .text {
+        font-size: 3vw;
+    }
+    .aboutcanslim {
+        font-size: 4vw;
+        padding-right: 5vw;
+        padding-left: 11vw;
+    }
+    img {
+        height: 35vw;
+    }
+    .morelinks {
+        font-size: 4vw;
+        padding-left: 11vw;
+    }
+    .footer a {
+        font-size: 4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .footer a.active {
+        font-size: 4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .footer a.active:hover {
+        font-size: 4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .twitter {
+        height: 20px;
+    }
+    body {
+      margin-bottom: 10vw;
+    }
+  }
+
+  .button {
+  background-color: #00BFFF;
+  border: none;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 1em;
+  box-shadow: 2px 2px 5px 0 rgb(255, 255, 255,0.30), -2px -2px 5px 0 rgb(255, 255, 255,0.30);
+  margin-top: 8vw;
+  margin-left: 16vw;
+  width: 10%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.button:hover {
+    background-color: #00bfff98;
+}
+
+svg {
+    margin-top: -5vw;
+}
+
+@media screen and (max-width: 600px) {
+    .section1{ 
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .square-box{ 
+        position: relative;
+        margin-left: 20%;
+        width: 50vw;
+    }
+    p {
+        font-size: 3vw;
+    }
+    .gauss {
+        margin-right: 8%;
+        width: 80vw;
+        margin-top: 20vw;
+    }
+    .button {
+        margin-left: 47%;
+    }
+    .square-box2{ 
+        position: relative;
+        margin-right: 17%;
+        width: 50vw;
+        margin-top: -30vw;
+    }
+    .stock {
+        margin-left: 9%;
+        width: 80vw;
+        margin-top: 8vw;
+    }
+    svg {
+      margin-top: 2vw;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="homeresponsive.html" class="active">Home</a>
+  <a href="toolresponsive.html">Tracker Tool</a>
+  <a href="howtoresponsive.html">How To Use</a>
+  <a href="#contact">Contact</a>
+  <a href="#resourcesresponsive.html">Resources</a>
+  <a href="aboutresponsive.html">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<section class="section1">
+    <div class='square-box'>
+        <div class='square-content'><div><span><h1 class="title" style="font-size: 3vw;"><b>Visualize Your Risk</b></h1>
+            <p class="subheader">A <b>clearer</b> picture of your trading. Gain a <b>better</b> edge to your trading
+                                through a portfolio tracker that foucuses on <b>risk management</b>.</p></span></div></div>
+    </div>
+    <a href="tool.html" class="button">Try Now</a>
+    <img class="gauss" style="-webkit-user-drag: none; position: relative; float: right; top: -12vw; padding-right: 2vw;" src="gausscss.png" alt="" height="100">
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0b0b0c" fill-opacity="1" d="M0,256L30,250.7C60,245,120,235,180,224C240,213,300,203,360,181.3C420,160,480,128,540,112C600,96,660,96,720,112C780,128,840,160,900,160C960,160,1020,128,1080,112C1140,96,1200,96,1260,90.7C1320,85,1380,75,1410,69.3L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+
+<section class="section2" style="background-color: #0B0B0C; height: 55vw; margin-top: -4%;">
+    <div class='square-box2'>
+        <div class='square-content2'><div><span><h1 style="font-size: 3vw;"><b>Visualize Your Risk</b></h1>
+            <p class="subheader2">A <b>clearer</b> picture of your trading. Gain a <b>better</b> edge to your trading
+                                through a portfolio tracker that foucuses on <b>risk management</b>.</p></span></div></div>
+    </div>
+<img class="stock" style="-webkit-user-drag: none; position: relative; float: left; top: 5vw; left: 2vw;" src="stockcss1.png" alt="" height="100">
+</section>
+<!--<div class="box" style="position: relative;">
+    <h1><b>Visualize Your Risk</b></h1>
+        <p class="subheader">A <b>clearer</b> picture of your trading. Gain a <b>better</b> edge to your trading
+                            through a portfolio tracker that foucuses on <b>risk management</b>.</p>
+</div>-->
+
+<div class="footer" id="myFooter">
+    <a class="active" href="contact.html">Contact</a>
+    <a href="resourcesresponsive.html">Resources</a>
+    <a href="aboutresponsive.html">About</a>
+    <a href="https://twitter.com/Jason_Fink9" target="blank_"><img class="twitter" src="Twitter_Logo.png" alt="Twitter" style="width:30px; overflow: hidden;"></a>
+    <a href="javascript:void(0);" class="icon" onclick="footerFunction()">
+        <i class="fa fa-bars"></i>
+</div>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function footerFunction() {
+          var x = document.getElementById("myFooter");
+          if (x.className === "footer") {
+            x.className += " responsive";
+          } else {
+            x.className = "footer";
+          }
+        }
+</script>
+
+</body>
+</html>

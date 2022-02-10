@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+
+<style>
+
+    body{
+        background-color: #17171a;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding-bottom: 10%;
+        margin-left: 0; 
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .topnav {
+  overflow: hidden;
+  background-color: #0B0B0C;
+  box-shadow: 1px 1px 5px 0 rgba(255, 255, 255,0.1);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav a:hover {
+  background-color: #17171A;
+  color: #fff;
+}
+
+.topnav a.active {
+  background-color: #0B0B0C;
+  border-right: 2px solid #fff;
+  color: #fff;
+}
+
+.topnav a.active:hover {
+  background-color: #17171A;
+  color: #fff;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .howto {
+        font-size: 2em;
+        padding-right: 5vw;
+        padding-left: 11vw;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    body {
+        margin-bottom: 20%;
+    }
+}
+
+
+
+  .text {
+    color: rgba(245,245,245,0.8);
+    font-size: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    text-indent: 3em;
+    line-height: 1.2em;
+  }
+
+  .howto {
+    padding-left: 7vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00BFFF;
+  }
+
+  h3 {
+      color: rgba(245,245,245,0.8);
+      font-weight: bolder;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 7vw;
+  }
+
+    .neumorphism {
+    box-shadow:  10px 10px 20px #0b0b0c,
+             -10px -10px 20px #0b0b0c;
+    border-radius: 1em;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px;
+  }
+
+  .footer {
+    height:10%; 
+    width: 100%; 
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
+    background-color: #0b0b0c;
+    box-shadow: 1px 1px 5px 0 rgba(255, 255, 255,0.1);
+}
+
+.footer a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 28px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer a:hover {
+  background-color: #17171a;
+  color: #ffffff;
+}
+
+.footer a.active {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 28px 28px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid rgba(245,245,245,0.8);
+}
+
+.footer a.active:hover {
+  float: left;
+  text-align: center;
+  padding: 28px 28px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #00BFFF;
+  background-color: #17171a;
+  color: #ffffff;
+}
+
+.footer.twitter {
+    position: absolute;
+    padding: 5px 7px;
+    left: 5em;
+}
+
+.footer .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .footer a {
+        font-size: 4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .footer a.active {
+        font-size: 4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .footer a.active:hover {
+        font-size: 4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+  }
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="homeresponsive.html" class="active">Home</a>
+        <a href="toolresponsive.html">Tracker Tool</a>
+        <a href="howtoresponsive.html">How To Use</a>
+        <a href="#contact">Contact</a>
+        <a href="resourcesresponsive.html">Resources</a>
+        <a href="aboutresponsive.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+
+      <h1 class="howto">How To Use The Tools</h1>
+      <br>
+      <h3>The Transaction Tracker</h3>
+      <div class="neumorphism">
+      <p class="text">The first tool requires the user to enter the number trade it is for them and the ticker 
+          symbol. Next, the user must enter the market value of the trade they enter and exit. This is the total 
+          cost and sale respectively. It is the number of shares times the share price that the stock was bought 
+          and sold for. The P/L will be automatically calculated based on the entry and exit values entered. If 
+          the trade was profitable (the "exit" is greater than the "enter") the text will be colored green. If the 
+          trade was sold for a loss, the text color will be red. Next, the percent gain or loss will be automatically
+          calculated. The next column of the table asks for the number of days the user held the trade for. Finally,
+          the "portfolio value" is automatically calculated by adding the P/L from the previous trade. This value 
+          starts at zero because it will track the total number of dollars the trader gains or loses over time. To
+          the right of the table, there is a chart that plots the portfolio value with respect to the trade number. 
+          It is recommended to see where there are large jumps up and down to see the trades that did really well or 
+          really poorly. If it did well, you know to continue the same method, but if there are any large drops, the 
+          trader can analyze what went wrong and prevent that situation from arising again. The goal is to keep this 
+          plot trending over the red line indicating you are profitable and without a lot of volatility, or large 
+          swings up and down. The other values of this table will be used in the second part of the tool.
+      </p>
+    </div>
+      <br>
+      <h3>The Overview Of Your Transaction Tracker</h3>
+      <div class="neumorphism">
+      <p class="text">The percent gains and losses calculated in the Transaction Tracker are averaged to show the user
+          what their average gain is for when they are right, and their average loss for when they are wrong. The goal
+          here is to have a larger average gain than average loss. Ideally, the user would want their average gain at 
+          least two times larger than their average loss in order to achieve excellent returns. Next, the user's 
+          batting average is calculated. This was a term used by Mark Minervini, and is the percent of profitable trades
+          with respection to all of your trades. It is the total number of green trades divided by the total number of 
+          trades to tell the user what percentage of their trades are profitable. The goal is to have this value over
+          50%, but if the user's losses are limited well, a batting average of 40% can still allow for excellent performance.
+          The user's gain-to-loss ratio is calculated next. This is the average percent gain divided by the average percent
+          loss. If this value is less than 1, then the user's losses are larger than their gains. If the value is greater 
+          that 1, then the user's gains are larger than their losses. The goal should be to make this value at least 2. This 
+          means their average gain is at least two times larger than their average loss. This combined with a good batting
+          average can allow the user to acheive an outstanding trading performance. The average profitable days held and average 
+          lossing trade days held shows the user the average number of days they hold a winning and losing trade. Finally, the 
+          largest gaining trade and largest losing trade will appear in the table. This is to just show the user, what their 
+          most profitable trade and their biggest loss was. 
+      </p>
+    </div>
+      <br>
+      <h3>The Monthly Tracker</h3>
+      <div class="neumorphism">
+      <p class="text">The Monthly Tracker tracks the users average gain, loss, batting average, largest profitable trade, and 
+          largest losing trade over the course of each month. The table also asks for the total number of trades the user 
+          performed in a given month. This will tell the trader if they are over trading. The Monthly Tracker also tracks 
+          the user's average gain and loss per day. This is the average gain and loss divided by the number of days in the month 
+          respectively. This will show the user how much they roughly earn and lose per day. The goal is to earn more than they 
+          lose per day with their average day gain greater than their average day loss. Finally, the total portfolio value at the 
+          end of the month is tracked here. The goal is to have each month's total value greater than the month's before indicating
+          portfolio growth. To the right of the table is a histogram plot of the total portfolio value with respect to each month for the user
+          to visualize their portfolio's growth. At the bottom is a smaller table to calculate the average of each month's batting 
+          average, the average of each month's average percent gain, the average of each month's average percent loss, and the user's 
+          total average gain-to-loss ratio. These averages will show the user their yearly batting average, yearly average percent 
+          gain, yearly average percent loss, and yearly gain-to-loss ratio.
+      </p>
+    </div>
+      <br>
+      <h3>The Gaussian Distribution</h3>
+      <div class="neumorphism">
+      <p class="text">The Gaussian Distribution is a histogram plot. The x-axis ranges from -40% to 40% and is incremented by 2% across.
+          The y-axis shows the total number of trades for a given percent range. For example, if the user has 5 trades between 2% and 4%,
+          then a bar with a length of 5 will be plotted at 2%. The user should decide on a hard stop loss to use for their trading. This 
+          value will act as a wall on the left side of the distribution where no trade will ever go lower. For example, if the user's hard
+          stop is 7%, then there will be a bar at the -6% location and no bars to the left of it. This bar is a wall. The goal is for the 
+          user to have their distribution of trades shifted to the right. The peak of their plot may be near the 0-4% range, but they will 
+          have trades over 10% and 20% to create bars to the right of their peak with no wall limiting their gains. There are two zeros on 
+          the plot. The left 0 is for trades that range between 0% and -2%, and the 0 on the right is for trades that range between 0% 
+          and 2%. The table has a column for each week. The user needs to enter each trade in its correct range and update the number throughout 
+          the week. For example if the trader has two 5% trades in a week, the need to enter a 2 in the 4% row for that week. The total number of 
+          trades for each percent range is automatically calculated at the far right of this table. At the bottom, there is a total sum of the 
+          total number of trades the user makes over time. 
+      </p>
+    </div>
+      <br>
+      <h3>The Market Tracker</h3>
+      <div class="neumorphism">
+      <p class="text">The last part of this tool is the Market Tracker. The user needs to enter their total portfolio value every day as 
+          well as the closing price of the SPX or other index they want to compare their trading to. The P/L for the portfolio and index 
+          is calculated for each day. There are two plots to the right of the table. The first plot shows the user's portfolio percent P/L 
+          in red with respect to the index's percent P/L in white. The goal for the user is to keep their portfolio trending over the zero 
+          line and the white line. This will indicate that they are profitable and beating the market. The second, lower plot shows the user 
+          their total portfolio value after each trading day. The goal for the user is to keep this value over the starting value to indicate 
+          profitability. 
+      </p>
+    </div>
+      <br>
+
+
+      <div class="footer" id="myFooter">
+        <a class="active" href="contact.html">Contact</a>
+        <a href="resourcesresponsive.html">Resources</a>
+        <a href="aboutresponsive.html">About</a>
+        <a href="https://twitter.com/Jason_Fink9" target="blank_"><img class="twitter" src="Twitter_Logo.png" alt="Twitter" style="height:20px; overflow: hidden;"></a>
+        <a href="javascript:void(0);" class="icon" onclick="footerFunction()">
+            <i class="fa fa-bars"></i>
+    </div>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+
+        function footerFunction() {
+          var x = document.getElementById("myFooter");
+          if (x.className === "footer") {
+            x.className += " responsive";
+          } else {
+            x.className = "footer";
+          }
+        }
+        </script>
+
+</body>
+
+</html>
